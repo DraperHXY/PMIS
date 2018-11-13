@@ -104,3 +104,5 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 
+jdbc.properties
+src/main/resources/jdbc.properties
