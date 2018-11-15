@@ -13,15 +13,15 @@
     </insert>
 
     <select id="selectUserByAccount" resultType="com.draper.entity.User">
-    SELECT *
-    FROM user
-    WHERE account = #{account}
+        SELECT *
+        FROM user
+        WHERE account = #{account}
     </select>
 
     <select id="selectUserByWorkId" resultType="com.draper.entity.User">
-    SELECT *
-    FROM user
-    WHERE work_id = #{workId}
+        SELECT *
+        FROM user
+        WHERE work_id = #{workId}
     </select>
 
 </mapper>
