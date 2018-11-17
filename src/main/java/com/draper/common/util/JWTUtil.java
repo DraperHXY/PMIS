@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class JWTUtil {
     /* 默认算法为 HS256 */
-    private static final SignatureAlgorithm DEFAULT_ALGORITHM = SignatureAlgorithm.HS256;
+    public static final SignatureAlgorithm DEFAULT_ALGORITHM = SignatureAlgorithm.HS256;
 
     /* 默认过期时间一小时 */
     public static final long DEFAULT_EXPIRE_TIME = (60 * 60 * 1000);

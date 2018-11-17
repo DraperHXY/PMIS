@@ -1,4 +1,4 @@
-package com.draper.entity;
+package com.draper.system.entity;
 
 import lombok.Data;
 

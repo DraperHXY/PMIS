@@ -11,6 +11,10 @@
         <put-attribute name="body" value="/WEB-INF/jsp/body/mainBody.jsp"/>
     </definition>
 
+    <definition name="loginView" template="/WEB-INF/jsp/defaultLayout.jsp">
+        <put-attribute name="all" value="/WEB-INF/jsp/body/loginAllBody.jsp"/>
+    </definition>
+
     <definition name="tableView" extends="indexView">
         <put-attribute name="body" value="/WEB-INF/jsp/body/table.jsp"/>
     </definition>

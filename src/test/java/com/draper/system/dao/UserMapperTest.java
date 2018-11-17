@@ -1,14 +1,14 @@
-package com.draper.dao;
+package com.draper.system.dao;
 
 import com.draper.BaseTest;
-import com.draper.entity.User;
+import com.draper.system.entity.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class UserDaoTest extends BaseTest {
+public class UserMapperTest extends BaseTest {
 
     @Autowired
-    private UserDao userDao;
+    private UserMapper userMapper;
 
 
     @Test
@@ -17,20 +17,20 @@ public class UserDaoTest extends BaseTest {
         user.setCreateAt(System.currentTimeMillis());
         user.setUpdateAt(System.currentTimeMillis());
         user.setAccount("root");
-        user.setWorkId(1);
+        user.setWorkId(2);
 
-        userDao.insertUser(user);
+        userMapper.insertUser(user);
     }
 
     @Test
     public void selectUserByAccount() {
-        User user = userDao.selectUserByAccount("root");
+        User user = userMapper.selectUserByAccount("root");
         System.out.println(user.getPassword());
     }
 
     @Test
     public void selectUserByWorkId() {
-        User user = userDao.selectUserByWorkId(1);
+        User user = userMapper.selectUserByWorkId(1);
         System.out.println(user.getPassword());
     }
 

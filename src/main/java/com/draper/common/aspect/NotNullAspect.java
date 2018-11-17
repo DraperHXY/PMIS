@@ -16,7 +16,7 @@ public class NotNullAspect {
 
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut("execution(* com.draper.web.*.*(String,..))")
+    @Pointcut("execution(* com.draper.system.web.*.*(String,..))")
     public void pointCut() {
     }
 

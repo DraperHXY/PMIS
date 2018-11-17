@@ -3,16 +3,20 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.draper"/>
+    <context:component-scan base-package="com.draper.common"/>
+    <context:component-scan base-package="com.draper.system.dao"/>
+    <context:component-scan base-package="com.draper.system.service"/>
+    <context:component-scan base-package="com.draper.system.web"/>
+    <context:component-scan base-package="com.draper.system.entity"/>
+
 
     <aop:aspectj-autoproxy/>
-
-    <!--<aop:aspectj-autoproxy proxy-target-class="true">-->
-    <!--<aop:include name="notNullAspect"/>-->
-    <!--</aop:aspectj-autoproxy>-->
-
-    <!--<bean id="notNullAspect" class="com.draper.common.aspect.NotNullAspect"/>-->
 
 </beans>
