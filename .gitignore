@@ -106,3 +106,5 @@ fabric.properties
 
 jdbc.properties
 src/main/resources/jdbc.properties
+README.md
+src/test

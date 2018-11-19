@@ -19,7 +19,7 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/*"/>
-            <bean class="com.draper.common.interceptor.UserInterceptor"/>
+            <bean class="com.draper.common.interceptor.UserLoginInInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 

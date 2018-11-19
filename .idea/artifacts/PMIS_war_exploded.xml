@@ -49,7 +49,6 @@
           <element id="library" level="project" name="Maven: org.apache.tiles:tiles-core:3.0.8" />
           <element id="library" level="project" name="Maven: org.apache.tiles:tiles-api:3.0.8" />
           <element id="library" level="project" name="Maven: commons-digester:commons-digester:2.0" />
-          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.8.0" />
           <element id="library" level="project" name="Maven: org.apache.tiles:tiles-request-servlet-wildcard:1.0.7" />
           <element id="library" level="project" name="Maven: org.apache.tiles:tiles-request-servlet:1.0.7" />
           <element id="library" level="project" name="Maven: org.apache.tiles:tiles-request-mustache:1.0.7" />
@@ -80,7 +79,6 @@
           <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt-api:0.10.5" />
           <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt-impl:0.10.5" />
           <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt-jackson:0.10.5" />
-          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-spring:1.4.0" />
           <element id="library" level="project" name="Maven: org.apache.shiro:shiro-core:1.4.0" />
           <element id="library" level="project" name="Maven: org.apache.shiro:shiro-lang:1.4.0" />
           <element id="library" level="project" name="Maven: org.apache.shiro:shiro-cache:1.4.0" />
@@ -89,8 +87,11 @@
           <element id="library" level="project" name="Maven: org.apache.shiro:shiro-crypto-cipher:1.4.0" />
           <element id="library" level="project" name="Maven: org.apache.shiro:shiro-config-core:1.4.0" />
           <element id="library" level="project" name="Maven: org.apache.shiro:shiro-config-ogdl:1.4.0" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.3" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.2" />
           <element id="library" level="project" name="Maven: org.apache.shiro:shiro-event:1.4.0" />
           <element id="library" level="project" name="Maven: org.apache.shiro:shiro-web:1.4.0" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-spring:1.4.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">

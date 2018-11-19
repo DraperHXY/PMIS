@@ -23,4 +23,12 @@ public class User {
     /* 工号 */
     private long workId;
 
+    private String salt;
+
+    private Boolean locked = Boolean.FALSE;
+
+    public String getCredentialsSalt() {
+        return account + salt;
+    }
+
 }
