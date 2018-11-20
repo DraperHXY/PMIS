@@ -12,7 +12,9 @@
 
     <context:annotation-config/>
 
-    <mvc:annotation-driven conversion-service="conversionService" validator="validator"/>
+    <mvc:annotation-driven conversion-service="conversionService" validator="validator">
+
+    </mvc:annotation-driven>
 
     <mvc:default-servlet-handler/>
 
@@ -42,8 +44,8 @@
           class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
         <property name="basenames">
             <list>
-                <value>classpath:message/msg</value>
-                <value>classpath:message/validation_msg</value>
+                <value>message.msg</value>
+                <value>message.validation_msg</value>
             </list>
         </property>
         <property name="fileEncodings" value="utf-8"/>

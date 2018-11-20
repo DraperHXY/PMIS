@@ -12,7 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class MyRealm extends AuthorizingRealm {
+public class UserSimpleRealm extends AuthorizingRealm {
 
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
@@ -21,7 +21,7 @@ public class MyRealm extends AuthorizingRealm {
 
     @Override
     public String getName() {
-        return "myRealm";
+        return "userSimpleRealm";
     }
 
     // 用来授权
@@ -35,15 +35,10 @@ public class MyRealm extends AuthorizingRealm {
     // 用来认证
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-        LOGGER.warn("userService = {}", userService);
-
         String account = (String) token.getPrincipal();
-        LOGGER.warn("principal = {}", account);
         String password = userService.selectPasswordByAccount(account);
-        LOGGER.warn("psw = {}", password);
-        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(account, password, getName());
 
-        return info;
+        return new SimpleAuthenticationInfo(account, password, getName());
     }
 
 }

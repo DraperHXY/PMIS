@@ -2,6 +2,8 @@ package com.draper.system.entity;
 
 import lombok.Data;
 
+import javax.validation.constraints.NotBlank;
+
 @Data
 public class User {
 
@@ -15,9 +17,11 @@ public class User {
     private long updateAt;
 
     /* 账号 */
+    @NotBlank(message = "user.account.notBlank")
     private String account;
 
     /* 密码 */
+    @NotBlank(message = "user.password.notBlank")
     private String password;
 
     /* 工号 */

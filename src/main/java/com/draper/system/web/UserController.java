@@ -13,6 +13,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,8 +43,15 @@ public class UserController {
     }
 
     @PostMapping("/loginIn")
-    public String addHeader(User user,
+    public String addHeader(@Validated User user,
+                            BindingResult bindingResult,
                             HttpServletResponse response) {
+        if (bindingResult.hasErrors()){
+            for (FieldError fieldError : bindingResult.getFieldErrors()) {
+                LOGGER.warn("Parameter error = {}", fieldError.getDefaultMessage());
+            }
+        }
+
 
         Subject subject = SecurityUtils.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(user.getAccount(),user.getPassword());
@@ -58,6 +68,7 @@ public class UserController {
         } else {
             return "redirect:/loginIn";
         }
+
 
     }
 
