@@ -19,8 +19,7 @@ public class UserServiceImpl implements UserService {
     public String selectPasswordByAccount(String account) {
         User user = userMapper.selectUserByAccount(account);
         if (user == null) {
-//            throw new UnknownAccountException();
-            return user.getPassword();
+            return null;
         } else {
             return user.getPassword();
         }

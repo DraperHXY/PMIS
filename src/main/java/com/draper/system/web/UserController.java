@@ -6,6 +6,7 @@ import com.draper.system.entity.User;
 import com.draper.system.service.JwtService;
 import com.draper.system.service.UserService;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
@@ -16,10 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -43,6 +41,7 @@ public class UserController {
     }
 
     @PostMapping("/loginIn")
+    @ResponseBody
     public String addHeader(@Validated User user,
                             BindingResult bindingResult,
                             HttpServletResponse response) {
@@ -56,7 +55,11 @@ public class UserController {
         Subject subject = SecurityUtils.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(user.getAccount(),user.getPassword());
 
-        subject.login(token);
+        try {
+            subject.login(token);
+        } catch (AuthenticationException e){
+            return e.getMessage();
+        }
 
         if (subject.isAuthenticated()) {
             String jws = jwtService.loginIn(user.getAccount());

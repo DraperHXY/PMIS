@@ -24,4 +24,10 @@
         WHERE work_id = #{workId}
     </select>
 
+    <select id="selectUser" resultType="com.draper.system.entity.User">
+        SELECT *
+        FROM user
+        WHERE id = #{id}
+    </select>
+
 </mapper>

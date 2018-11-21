@@ -2,8 +2,11 @@ package com.draper.system.entity;
 
 import lombok.Data;
 
+/**
+ * 用户与角色的多对多关系
+ */
 @Data
-public class Role {
+public class UserRoleRelation {
 
     /* 主键 */
     private long id;
@@ -14,10 +17,10 @@ public class Role {
     /* 更新时间 */
     private long updateAt;
 
-    /* 角色名 */
-    private String name;
+    /* 用户主键 */
+    private long userId;
 
-    /* 角色描述 */
-    private String description;
+    /* 角色主键 */
+    private long roleId;
 
 }

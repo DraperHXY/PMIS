@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.draper.system.dao.RoleMapper">
+
+    <insert id="insertRole">
+        INSERT INTO role
+        (create_at,update_at,name,description)
+        VALUES
+        (#{createAt}, #{updateAt}, #{name}, #{description})
+    </insert>
+
+    <delete id="deleteRole">
+        DELETE FROM role
+        WHERE id = #{id}
+    </delete>
+
+    <select id="selectIdByName" resultType="java.lang.Long">
+        SELECT id
+        FROM  role
+        WHERE name = #{name}
+    </select>
+
+    <select id="selectRole" resultType="com.draper.system.entity.Role">
+        SELECT *
+        FROM role
+        WHERE id = #{id}
+    </select>
+
+
+</mapper>

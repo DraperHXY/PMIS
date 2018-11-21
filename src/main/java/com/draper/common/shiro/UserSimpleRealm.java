@@ -35,6 +35,7 @@ public class UserSimpleRealm extends AuthorizingRealm {
     // 用来认证
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
+
         String account = (String) token.getPrincipal();
         String password = userService.selectPasswordByAccount(account);
 
