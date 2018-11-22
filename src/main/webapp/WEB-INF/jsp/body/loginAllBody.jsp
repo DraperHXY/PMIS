@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="/PMIS/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/PMIS/static/css/bootstrap.min.css"/>
 </head>
 <body>
 
 <div class="container-fluid text-center">
 
     <div style="margin-top: 15%;">
-        <h1 class="text-center">人事管理信息系统</h1>
+        <h1 class="text-center">人事权限管理信息系统</h1>
 
         <div class="row">
 

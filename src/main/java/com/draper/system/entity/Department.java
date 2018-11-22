@@ -14,9 +14,6 @@ public class Department {
     /* 更新时间 */
     private long updateAt;
 
-    /* 部门 id */
-    private long departmentId;
-
     /* 部门名称 */
     private String name;
 

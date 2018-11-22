@@ -1,16 +1,39 @@
 package com.draper.system.service;
 
-import javax.management.relation.Role;
+
+import com.draper.system.entity.Role;
 
 public interface RoleService {
 
-    public Role createRole(Role role);
+    /**
+     * 创建角色
+     *
+     * @param role
+     * @return
+     */
+    Role createRole(Role role);
 
-    public void deleteRole(Long roleId);
+    /**
+     * 删除角色
+     *
+     * @param roleId
+     * @deprecated {@link com.draper.system.dao.RoleMapper#deleteRole(long)}
+     */
+    void deleteRole(Long roleId);
 
-    //添加角色-权限之间关系
-    public void correlationPermissions(Long roleId, Long... permissionIds);
+    /**
+     * 通过角色名查找 id
+     *
+     * @param name
+     * @return
+     */
+    long findIdByName(String name);
 
-    //移除角色-权限之间关系
-    public void uncorrelationPermissions(Long roleId, Long... permissionIds);//
+    /**
+     * 通过 id 查找角色
+     *
+     * @param id
+     * @return
+     */
+    Role findRole(long id);
 }

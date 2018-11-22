@@ -23,4 +23,9 @@ public class DefaultController {
         return "indexView";
     }
 
+    @GetMapping("/table")
+    public String tableView(){
+        return "tableView";
+    }
+
 }

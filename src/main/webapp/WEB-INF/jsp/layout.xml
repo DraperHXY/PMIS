@@ -7,7 +7,7 @@
     <definition name="indexView" template="/WEB-INF/jsp/mainLayout.jsp">
         <put-attribute name="head" value="/WEB-INF/jsp/component/head.jsp"/>
         <put-attribute name="header" value="/WEB-INF/jsp/component/header.jsp"/>
-        <put-attribute name="menu" value="/WEB-INF/jsp/component/menu.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/jsp/component/menu/mainMenu.jsp"/>
         <put-attribute name="body" value="/WEB-INF/jsp/body/mainBody.jsp"/>
     </definition>
 
@@ -17,6 +17,21 @@
 
     <definition name="tableView" extends="indexView">
         <put-attribute name="body" value="/WEB-INF/jsp/body/table.jsp"/>
+    </definition>
+
+    <definition name="departmentView" extends="indexView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/department/all.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/jsp/component/menu/departmentMenu.jsp"/>
+    </definition>
+
+    <definition name="departmentNewView" extends="indexView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/department/new.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/jsp/component/menu/departmentMenu.jsp"/>
+    </definition>
+
+    <definition name="departmentAllView" extends="indexView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/department/all.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/jsp/component/menu/departmentMenu.jsp"/>
     </definition>
 
 </tiles-definitions>

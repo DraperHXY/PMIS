@@ -41,7 +41,6 @@ public class UserController {
     }
 
     @PostMapping("/loginIn")
-    @ResponseBody
     public String addHeader(@Validated User user,
                             BindingResult bindingResult,
                             HttpServletResponse response) {
@@ -67,6 +66,10 @@ public class UserController {
             cookie.setMaxAge(60 * 1000 * 10);
             cookie.setPath("/");
             response.addCookie(cookie);
+
+            LOGGER.warn("subject's role is admin {}", subject.hasRole("admin"));
+            LOGGER.warn("subject's role is user {}", subject.hasRole("user"));
+
             return "redirect:/index";
         } else {
             return "redirect:/loginIn";
