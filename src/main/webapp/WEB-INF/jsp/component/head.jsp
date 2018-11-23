@@ -6,4 +6,5 @@
 
 <script type="text/javascript" src="/PMIS/static/js/jquery-1-12-4.min.js"></script>
 <script type="text/javascript" src="/PMIS/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/PMIS/static/js/myScript.js"></script>
 

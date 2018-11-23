@@ -12,7 +12,7 @@
         <property name="filterChainDefinitions">
             <value>
                 /loginIn = anon
-                /* = authc
+                /* = anon
             </value>
         </property>
     </bean>

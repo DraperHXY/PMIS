@@ -11,6 +11,14 @@
         <put-attribute name="body" value="/WEB-INF/jsp/body/mainBody.jsp"/>
     </definition>
 
+    <definition name="successView" extends="indexView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/default/success.jsp"/>
+    </definition>
+
+    <definition name="failView" extends="indexView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/default/fail.jsp"/>
+    </definition>
+
     <definition name="loginInView" template="/WEB-INF/jsp/defaultLayout.jsp">
         <put-attribute name="all" value="/WEB-INF/jsp/body/loginAllBody.jsp"/>
     </definition>
@@ -24,14 +32,20 @@
         <put-attribute name="menu" value="/WEB-INF/jsp/component/menu/departmentMenu.jsp"/>
     </definition>
 
-    <definition name="departmentNewView" extends="indexView">
+    <definition name="departmentNewView" extends="departmentView">
         <put-attribute name="body" value="/WEB-INF/jsp/body/department/new.jsp"/>
-        <put-attribute name="menu" value="/WEB-INF/jsp/component/menu/departmentMenu.jsp"/>
     </definition>
 
-    <definition name="departmentAllView" extends="indexView">
+    <definition name="departmentAllView" extends="departmentView">
         <put-attribute name="body" value="/WEB-INF/jsp/body/department/all.jsp"/>
-        <put-attribute name="menu" value="/WEB-INF/jsp/component/menu/departmentMenu.jsp"/>
+    </definition>
+
+    <definition name="departmentModifyView" extends="departmentView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/department/modify.jsp"/>
+    </definition>
+
+    <definition name="departmentDeleteView" extends="departmentView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/department/delete.jsp"/>
     </definition>
 
 </tiles-definitions>

@@ -5,31 +5,31 @@
 
     </div>
 
-    <form action="#" class="navbar-form navbar-right">
-        <div class="dropdown">
-            <div class="btn btn-success dropdown-toggle" id="dropdownMenu1"
-                 data-toggle="dropdown" style="margin-right: 20px; " aria-expanded="false">
+    <%--<form action="#" style="padding:0px;" class="navbar-form navbar-right">--%>
+        <%--<div class="dropdown">--%>
+            <%--<div class="btn btn-success dropdown-toggle" id="dropdownMenu1"--%>
+                 <%--data-toggle="dropdown" aria-expanded="false">--%>
 
-                <span class="glyphicon glyphicon-user">admin</span>
-                <span class="caret"></span>
-            </div>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="#">
-                        <span class="glyphicon glyphicon-cog pull-right"></span>
-                        修改个人信息
-                    </a>
-                </li>
-                <!---分割线----->
-                <li role="presentation" class="divider"></li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="#">
-                        <span class="glyphicon glyphicon-off pull-right"></span>
-                        注销
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </form>
+                <%--<span class="glyphicon glyphicon-user">admin</span>--%>
+                <%--<span class="caret"></span>--%>
+            <%--</div>--%>
+            <%--<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">--%>
+                <%--<li role="presentation">--%>
+                    <%--<a role="menuitem" tabindex="-1" href="#">--%>
+                        <%--<span class="glyphicon glyphicon-cog pull-right"></span>--%>
+                        <%--修改个人信息--%>
+                    <%--</a>--%>
+                <%--</li>--%>
+                <%--<!---分割线----->--%>
+                <%--<li role="presentation" class="divider"></li>--%>
+                <%--<li role="presentation">--%>
+                    <%--<a role="menuitem" tabindex="-1" href="#">--%>
+                        <%--<span class="glyphicon glyphicon-off pull-right"></span>--%>
+                        <%--注销--%>
+                    <%--</a>--%>
+                <%--</li>--%>
+            <%--</ul>--%>
+        <%--</div>--%>
+    <%--</form>--%>
 
 </nav>

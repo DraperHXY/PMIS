@@ -24,8 +24,18 @@ public class DefaultController {
     }
 
     @GetMapping("/table")
-    public String tableView(){
+    public String tableView() {
         return "tableView";
+    }
+
+    @GetMapping("/success")
+    public String successView() {
+        return "successView";
+    }
+
+    @GetMapping("/fail")
+    public String failView() {
+        return "failView";
     }
 
 }

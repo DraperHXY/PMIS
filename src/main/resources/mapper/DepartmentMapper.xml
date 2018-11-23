@@ -17,4 +17,21 @@
         FROM department
     </select>
 
+    <select id="selectByKey" resultType="com.draper.system.entity.Department">
+        SELECT *
+        FROM department
+        WHERE ${key} = #{value}
+    </select>
+
+    <update id="modifyByKey">
+        UPDATE department
+        SET ${modifyKey} = #{modifyValue}
+        WHERE ${findKey} = #{findValue}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM department
+        WHERE id = #{id}
+    </delete>
+
 </mapper>

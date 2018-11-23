@@ -4,6 +4,10 @@ import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 
+/**
+ * 系统用户
+ * 负责账号密码
+ */
 @Data
 public class User {
 

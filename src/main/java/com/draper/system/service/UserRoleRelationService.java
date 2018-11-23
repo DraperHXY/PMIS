@@ -7,14 +7,14 @@ import java.util.List;
 public interface UserRoleRelationService {
 
     /**
-     * 连接用户与角色之间的关系
+     * 连接 user 与 role 之间的关系
      *
      * @param relation
      */
     void correlate(UserRoleRelation relation);
 
     /**
-     * 删除用户与角色之间的关系
+     * 删除 user 与 role 之间的关系
      *
      * @param userId
      * @param roleId
@@ -22,7 +22,7 @@ public interface UserRoleRelationService {
     void unCorrelate(long userId, long roleId);
 
     /**
-     * 查找用户的所有角色
+     * 查找 user 的所有 role
      *
      * @param userId
      * @return
@@ -30,7 +30,7 @@ public interface UserRoleRelationService {
     List<UserRoleRelation> selectUserRoles(long userId);
 
     /**
-     * 查找拥有该角色的所有用户
+     * 查找拥有该 role 的所有 user
      *
      * @param roleId
      * @return

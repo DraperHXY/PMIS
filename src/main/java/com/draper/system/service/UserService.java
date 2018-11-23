@@ -4,7 +4,7 @@ package com.draper.system.service;
 public interface UserService {
 
     /**
-     * 通过账号查找 id
+     * 通过 account 查找 id
      *
      * @param account
      * @return
@@ -13,7 +13,7 @@ public interface UserService {
 
 
     /**
-     * 通过账号查找密码
+     * 通过 account 查找 password
      *
      * @param account
      * @return
@@ -21,7 +21,7 @@ public interface UserService {
     String selectPasswordByAccount(String account);
 
     /**
-     * 验证是否合法用户
+     * 验证是否合法 user
      *
      * @param account
      * @param password
@@ -30,7 +30,7 @@ public interface UserService {
     boolean verify(String account, String password);
 
     /**
-     * 注册新用户
+     * 注册 user
      *
      * @param account
      * @param password
@@ -39,7 +39,7 @@ public interface UserService {
     boolean loginUp(String account, String password);
 
     /**
-     * 修改密码
+     * 修改 password
      *
      * @param account
      * @param newPassword

@@ -34,3 +34,22 @@ function getScreenHight() {
 function setFillScreenHeight() {
     document.getElementById("menu").style.height = getScreenHight() - 50 + "px";
 }
+
+function httpGetUrl(URL) {
+    location = URL;
+}
+
+function httpDeleteUrl(URL) {
+    var form = document.createElement("form");
+    form.action = URL;
+    form.method = "post";
+
+    var inputHidden = document.createElement("input");
+    inputHidden.type = "hidden";
+    inputHidden.name = "_method";
+    inputHidden.value = "DELETE";
+
+    form.appendChild(inputHidden);
+    document.body.appendChild(form);
+    form.submit();
+}

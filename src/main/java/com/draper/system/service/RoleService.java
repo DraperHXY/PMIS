@@ -6,7 +6,7 @@ import com.draper.system.entity.Role;
 public interface RoleService {
 
     /**
-     * 创建角色
+     * 创建 role
      *
      * @param role
      * @return
@@ -14,7 +14,7 @@ public interface RoleService {
     Role createRole(Role role);
 
     /**
-     * 删除角色
+     * 通过 id 删除 role
      *
      * @param roleId
      * @deprecated {@link com.draper.system.dao.RoleMapper#deleteRole(long)}
@@ -22,7 +22,7 @@ public interface RoleService {
     void deleteRole(Long roleId);
 
     /**
-     * 通过角色名查找 id
+     * 通过 name 查找 id
      *
      * @param name
      * @return
@@ -30,7 +30,7 @@ public interface RoleService {
     long findIdByName(String name);
 
     /**
-     * 通过 id 查找角色
+     * 通过 id 查找 role
      *
      * @param id
      * @return

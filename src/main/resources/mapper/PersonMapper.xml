@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.draper.system.dao.PersonMapper">
+
+    <insert id="insert">
+        INSERT INTO person
+        (create_at,update_at,work_id,name,birth_day,sex,nation,person_id,address,email,note)
+        VALUES
+        (#{createAt}, #{updateAt}, #{workId}, #{name}, #{birthDay}, #{sex}, #{nation}, #{personId}, #{address}, #{email}, #{note})
+    </insert>
+
+    <select id="selectByKey" resultType="com.draper.system.entity.Person">
+        SELECT *
+        FROM person
+        WHERE ${key} = #{value}
+    </select>
+
+    <update id="modifyByKey">
+        UPDATE person
+        SET ${modifyKey} = #{modifyValue}
+        WHERE ${findKey} = #{findValue}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM person
+        WHERE id = #{id}
+    </delete>
+
+</mapper>
