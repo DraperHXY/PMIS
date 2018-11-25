@@ -1,6 +1,8 @@
 package com.draper.system.service;
 
 
+import java.util.List;
+
 public interface UserService {
 
     /**
@@ -45,5 +47,7 @@ public interface UserService {
      * @param newPassword
      */
     void changePassword(String account, String newPassword);
+
+    List<Long> findAllWorkId();
 
 }

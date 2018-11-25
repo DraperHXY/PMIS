@@ -29,7 +29,7 @@
 
     <definition name="departmentView" extends="indexView">
         <put-attribute name="body" value="/WEB-INF/jsp/body/department/all.jsp"/>
-        <put-attribute name="menu" value="/WEB-INF/jsp/component/menu/departmentMenu.jsp"/>
+        <!--<put-attribute name="menu" value="/WEB-INF/jsp/component/menu/departmentMenu.jsp"/>-->
     </definition>
 
     <definition name="departmentNewView" extends="departmentView">
@@ -46,6 +46,15 @@
 
     <definition name="departmentDeleteView" extends="departmentView">
         <put-attribute name="body" value="/WEB-INF/jsp/body/department/delete.jsp"/>
+    </definition>
+
+    <definition name="employeeView" extends="indexView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/employee/all.jsp"/>
+        <!--<put-attribute name="menu" value="/WEB-INF/jsp/component/menu/departmentMenu.jsp"/>-->
+    </definition>
+
+    <definition name="employeeNewView" extends="employeeView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/employee/new.jsp"/>
     </definition>
 
 </tiles-definitions>

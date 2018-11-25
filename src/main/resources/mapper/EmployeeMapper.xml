@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.draper.system.dao.EmployeeMapper">
+
+    <insert id="insert">
+        INSERT INTO employee
+        (create_at,update_at,work_id,state,job,duty,duty_type,job_title,duty_description,department_id,superior_id)
+        VALUES
+        (#{createAt}, #{updateAt}, #{workId}, #{state}, #{job}, #{duty}, #{dutyType},#{jobTitle}, #{dutyDescription}, #{departmentId},#{superiorId})
+    </insert>
+
+    <select id="selectAll" resultType="com.draper.system.entity.Employee">
+        SELECT *
+        FROM employee
+    </select>
+
+    <select id="selectMaxId" resultType="java.lang.Long">
+        SELECT MAX(id)
+        FROM employee;
+    </select>
+
+    <select id="selectByWorkId" resultType="com.draper.system.entity.Employee">
+        SELECT *
+        FROM employee
+        WHERE work_id = #{workId}
+    </select>
+
+</mapper>

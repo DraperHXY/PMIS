@@ -6,6 +6,8 @@ import com.draper.system.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -45,7 +47,7 @@ public class UserServiceImpl implements UserService {
             user.setCreateAt(System.currentTimeMillis());
             user.setUpdateAt(System.currentTimeMillis());
             // TODO: 2018/11/16 user.setWorkId
-            userMapper.insertUser(user);
+            userMapper.insert(user);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -56,6 +58,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public void changePassword(String account, String newPassword) {
 
+    }
+
+    @Override
+    public List<Long> findAllWorkId() {
+        return userMapper.selectAllWorkId();
     }
 
 }

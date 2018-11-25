@@ -35,6 +35,9 @@ public class Person {
     /* 身份证号 */
     private String personId;
 
+    /* 移动电话 */
+    private String phone;
+
     /* 地址 */
     private String address;
 

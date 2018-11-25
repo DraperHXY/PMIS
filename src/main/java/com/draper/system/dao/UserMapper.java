@@ -11,7 +11,7 @@ public interface UserMapper {
      *
      * @param user
      */
-    void insertUser(User user);
+    void insert(User user);
 
     /**
      * 通过 account 来查找用户
@@ -50,5 +50,7 @@ public interface UserMapper {
      */
     // FIXME: 2018/11/21 该功能应该交给 UserRoleRelationMapper
     List<String> selectPermissions(long userId);
+
+    List<Long> selectAllWorkId();
 
 }

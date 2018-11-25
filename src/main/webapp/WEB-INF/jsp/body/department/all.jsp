@@ -3,20 +3,23 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <div class="row">
-            <h1 class="col-md-6">人力资源管理</h1>
+            <h1 class="col-md-6">部门管理</h1>
+            <button class="btn btn-success col-md-1 col-md-push-5" style="margin-top: 22px"
+                    onclick="httpGetUrl('/PMIS/department/new')">新增部门
+            </button>
         </div>
     </div>
 
     <table class="table table-bordered">
         <thead>
         <tr>
-            <th>部门名称</th>
-            <th>部门所属</th>
-            <th>部落领导</th>
-            <th>部门电话</th>
-            <th>办公室</th>
-            <th>备注</th>
-            <th>操作</th>
+            <th class="text-center">部门名称</th>
+            <th class="text-center">部门所属</th>
+            <th class="text-center">部落领导</th>
+            <th class="text-center">部门电话</th>
+            <th class="text-center">办公室</th>
+            <th class="text-center">备注</th>
+            <th class="text-center">操作</th>
         </tr>
         </thead>
 

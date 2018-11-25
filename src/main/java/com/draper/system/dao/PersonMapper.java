@@ -3,6 +3,8 @@ package com.draper.system.dao;
 import com.draper.system.entity.Person;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface PersonMapper {
 
     /**
@@ -47,5 +49,7 @@ public interface PersonMapper {
      * @param id
      */
     void delete(long id);
+
+    List<Person> selectAll();
 
 }

@@ -5,7 +5,7 @@
 
 <mapper namespace="com.draper.system.dao.UserMapper">
 
-    <insert id="insertUser">
+    <insert id="insert">
         INSERT INTO user
         (create_at,update_at,account,password,work_id)
         VALUES
@@ -28,6 +28,11 @@
         SELECT *
         FROM user
         WHERE id = #{id}
+    </select>
+
+    <select id="selectAllWorkId" resultType="java.lang.Long">
+        SELECT work_id
+        FROM user
     </select>
 
 </mapper>

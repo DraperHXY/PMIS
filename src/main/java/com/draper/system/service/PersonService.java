@@ -2,6 +2,8 @@ package com.draper.system.service;
 
 import com.draper.system.entity.Person;
 
+import java.util.List;
+
 public interface PersonService {
 
     /**
@@ -79,5 +81,7 @@ public interface PersonService {
      * @return
      */
     boolean modifyNoteById(String note, long id);
+
+    List<Person> findAll();
 
 }

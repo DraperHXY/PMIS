@@ -1,6 +1,7 @@
 package com.draper.system.dao;
 
 import com.draper.BaseTest;
+import com.draper.common.util.MD5Utils;
 import com.draper.system.entity.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +17,11 @@ public class UserMapperTest extends BaseTest {
         User user = new User();
         user.setCreateAt(System.currentTimeMillis());
         user.setUpdateAt(System.currentTimeMillis());
-        user.setAccount("root");
-        user.setWorkId(2);
+        user.setAccount("lida@draper.com");
+        user.setPassword(MD5Utils.encrypt("lida"));
+        user.setWorkId(3);
 
-        userMapper.insertUser(user);
+        userMapper.insert(user);
     }
 
     @Test

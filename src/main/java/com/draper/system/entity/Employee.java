@@ -3,7 +3,7 @@ package com.draper.system.entity;
 import lombok.Data;
 
 @Data
-public class Work {
+public class Employee {
 
     /* 主键 */
     private long id;
@@ -18,9 +18,9 @@ public class Work {
     private long workId;
 
     /* 工作状态 */
-    private StateJob stateJob;
+    private State state;
 
-    public enum StateJob {
+    public enum State {
         INTERNSHIP, ON_JOB
     }
 

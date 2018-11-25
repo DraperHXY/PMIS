@@ -6,6 +6,8 @@ import com.draper.system.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PersonServiceImpl implements PersonService {
 
@@ -62,6 +64,11 @@ public class PersonServiceImpl implements PersonService {
     public boolean modifyNoteById(String note, long id) {
         personMapper.modifyByKey("note", note, "id", id);
         return true;
+    }
+
+    @Override
+    public List<Person> findAll() {
+        return personMapper.selectAll();
     }
 
 }

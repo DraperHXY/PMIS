@@ -1,7 +1,6 @@
 package com.draper.system.dao;
 
 import com.draper.system.entity.Department;
-import com.draper.system.entity.Person;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

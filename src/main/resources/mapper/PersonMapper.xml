@@ -7,9 +7,9 @@
 
     <insert id="insert">
         INSERT INTO person
-        (create_at,update_at,work_id,name,birth_day,sex,nation,person_id,address,email,note)
+        (create_at,update_at,work_id,name,birth_day,sex,nation,person_id,phone,address,email,note)
         VALUES
-        (#{createAt}, #{updateAt}, #{workId}, #{name}, #{birthDay}, #{sex}, #{nation}, #{personId}, #{address}, #{email}, #{note})
+        (#{createAt}, #{updateAt}, #{workId}, #{name}, #{birthDay}, #{sex}, #{nation}, #{personId},#{phone}, #{address}, #{email}, #{note})
     </insert>
 
     <select id="selectByKey" resultType="com.draper.system.entity.Person">
@@ -28,5 +28,10 @@
         DELETE FROM person
         WHERE id = #{id}
     </delete>
+
+    <select id="selectAll" resultType="com.draper.system.entity.Person">
+        SELECT *
+        FROM person
+    </select>
 
 </mapper>

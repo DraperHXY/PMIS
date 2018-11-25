@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" isELIgnored="false" %>
 <nav class="navbar navbar-default navbar-static-top" style="margin-bottom:0px;">
     <div class="navbar-header">
-        <a href="" class="nav navbar-brand">管理信息系统</a>
+        <a href="/PMIS" class="nav navbar-brand">管理信息系统</a>
 
     </div>
 
