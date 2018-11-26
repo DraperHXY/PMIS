@@ -7,6 +7,9 @@ import javax.validation.constraints.NotBlank;
 /**
  * 系统用户
  * 负责账号密码
+ *
+ * @see Employee
+ * @see Person
  */
 @Data
 public class User {

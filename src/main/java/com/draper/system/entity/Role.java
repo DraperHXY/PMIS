@@ -2,6 +2,9 @@ package com.draper.system.entity;
 
 import lombok.Data;
 
+/**
+ *
+ */
 @Data
 public class Role {
 

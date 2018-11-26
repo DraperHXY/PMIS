@@ -2,6 +2,9 @@ package com.draper.system.entity;
 
 import lombok.Data;
 
+/**
+ * 员工信息，主要包含工作方面的信息，一般与 {@link Person} 和 {@link User} 一同调用
+ */
 @Data
 public class Employee {
 

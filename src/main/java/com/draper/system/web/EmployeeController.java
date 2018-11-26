@@ -6,6 +6,7 @@ import com.draper.system.service.DepartmentSerivce;
 import com.draper.system.service.EmployeeService;
 import com.draper.system.service.PersonService;
 import com.draper.system.service.UserService;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +49,7 @@ public class EmployeeController {
         return modelAndView;
     }
 
+    @RequiresRoles("admin1")
     @GetMapping("/new")
     public ModelAndView employeeNewView(ModelAndView modelAndView) {
         modelAndView.setViewName("employeeNewView");
@@ -57,6 +59,7 @@ public class EmployeeController {
         return modelAndView;
     }
 
+    @RequiresRoles("admin1")
     @PostMapping("/new")
     public String employeeNewPost(@RequestParam Map<String, String> parameterMap) {
         boolean isCreate = employeeService.create(parameterMap);

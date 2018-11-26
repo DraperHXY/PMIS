@@ -78,4 +78,10 @@ public class UserController {
 
     }
 
+    @GetMapping("/logout")
+    public String logoutView(){
+        LOGGER.warn("处理成功");
+        return "redirect:/user/loginIn";
+    }
+
 }

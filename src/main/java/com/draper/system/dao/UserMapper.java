@@ -7,7 +7,7 @@ import java.util.List;
 public interface UserMapper {
 
     /**
-     * 插入用户
+     * 插入 user
      *
      * @param user
      */
@@ -22,7 +22,7 @@ public interface UserMapper {
     User selectUserByAccount(String account);
 
     /**
-     * 通过 workId 来查找用户
+     * 通过 workId 来查找 user
      *
      * @param workId
      * @return
@@ -30,20 +30,20 @@ public interface UserMapper {
     User selectUserByWorkId(long workId);
 
     /**
-     * 通过 id 查找用户
+     * 通过 id 查找 user
      *
      * @return
      */
     User selectUser(long id);
 
     /**
-     * 用户拥有的角色
+     * 查找 user 拥有的 role
      */
     // FIXME: 2018/11/21 该功能应该交给 UserRoleRelationMapper
     List<String> selectRoles(long userId);
 
     /**
-     * 用户拥有的权限
+     * user 拥有的 permission
      *
      * @param userId
      * @return

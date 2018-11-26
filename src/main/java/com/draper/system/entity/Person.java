@@ -3,7 +3,10 @@ package com.draper.system.entity;
 import lombok.Data;
 
 /**
- * 个人信息
+ * 个人信息,主要包含 姓名，出生日期，身份证号等私人信息
+ *
+ * @see Employee
+ * @see User
  */
 @Data
 public class Person {

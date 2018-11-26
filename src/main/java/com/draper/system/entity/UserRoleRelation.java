@@ -3,7 +3,7 @@ package com.draper.system.entity;
 import lombok.Data;
 
 /**
- * 用户与角色的多对多关系
+ * {@link User} 与 {@link Role} 的多对多关系
  */
 @Data
 public class UserRoleRelation {

@@ -2,6 +2,9 @@ package com.draper.system.entity;
 
 import lombok.Data;
 
+/**
+ * 部门信息
+ */
 @Data
 public class Department {
 
