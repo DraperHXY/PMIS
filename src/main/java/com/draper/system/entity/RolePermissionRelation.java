@@ -3,7 +3,7 @@ package com.draper.system.entity;
 import lombok.Data;
 
 @Data
-public class Permission {
+public class RolePermissionRelation {
 
     /* 主键 */
     private long id;
@@ -14,10 +14,10 @@ public class Permission {
     /* 更新时间 */
     private long updateAt;
 
-    /* 权限标识 程序中判断使用,如"user:create" */
-    private String permission;
+    /* 角色主键 */
+    private long roleId;
 
-    /* 权限描述,UI界面显示使用 */
-    private String description;
+    /* 权限主键 */
+    private long permissionId;
 
 }

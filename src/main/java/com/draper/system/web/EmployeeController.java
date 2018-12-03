@@ -49,7 +49,6 @@ public class EmployeeController {
         return modelAndView;
     }
 
-    @RequiresRoles("admin1")
     @GetMapping("/new")
     public ModelAndView employeeNewView(ModelAndView modelAndView) {
         modelAndView.setViewName("employeeNewView");
@@ -59,7 +58,6 @@ public class EmployeeController {
         return modelAndView;
     }
 
-    @RequiresRoles("admin1")
     @PostMapping("/new")
     public String employeeNewPost(@RequestParam Map<String, String> parameterMap) {
         boolean isCreate = employeeService.create(parameterMap);

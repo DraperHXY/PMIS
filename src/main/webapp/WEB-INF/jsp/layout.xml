@@ -57,4 +57,13 @@
         <put-attribute name="body" value="/WEB-INF/jsp/body/employee/new.jsp"/>
     </definition>
 
+    <definition name="permissionView" extends="indexView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/permission/all.jsp"/>
+        <!--<put-attribute name="menu" value="/WEB-INF/jsp/component/menu/departmentMenu.jsp"/>-->
+    </definition>
+
+    <definition name="permissionNewView" extends="permissionView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/permission/new.jsp"/>
+    </definition>
+
 </tiles-definitions>

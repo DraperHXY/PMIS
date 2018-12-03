@@ -208,7 +208,7 @@
                     <br>
 
                     <div class="form-group" style="margin: 10px 0px 0px 0px;">
-                        <button type="submit" name="submit" class="btn btn-success center-block">上传
+                        <button type="submit" name="submit" class="btn btn-success center-block">添加
                         </button>
                     </div>
                 </div>

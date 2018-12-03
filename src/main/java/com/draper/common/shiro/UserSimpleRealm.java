@@ -2,6 +2,7 @@ package com.draper.common.shiro;
 
 import com.draper.system.entity.Role;
 import com.draper.system.entity.UserRoleRelation;
+import com.draper.system.service.PermissionService;
 import com.draper.system.service.RoleService;
 import com.draper.system.service.UserRoleRelationService;
 import com.draper.system.service.UserService;
@@ -21,7 +22,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class UserSimpleRealm extends AuthorizingRealm {
 
@@ -34,7 +34,12 @@ public class UserSimpleRealm extends AuthorizingRealm {
     private RoleService roleService;
 
     @Autowired
-    private UserRoleRelationService relationService;
+    private UserRoleRelationService userRoleRelationService;
+
+    @Autowired
+    private PermissionService permissionService;
+
+    @Autowired
 
     @Override
     public String getName() {
@@ -47,7 +52,7 @@ public class UserSimpleRealm extends AuthorizingRealm {
 
         String account = (String) principals.getPrimaryPrincipal();
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-        List<UserRoleRelation> relations = relationService.selectUserRoles(userService.selectIdByAccount(account));
+        List<UserRoleRelation> relations = userRoleRelationService.selectUserRoles(userService.selectIdByAccount(account));
 
         List<String> stringList = new ArrayList<>();
 

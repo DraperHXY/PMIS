@@ -32,24 +32,24 @@
         </thead>
 
         <tbody>
-        <c:forEach items="${infoList}" var="item">
+        <c:forEach items="${infoList}" var="permission">
             <tr class="text-center break-all">
-                <td>${item.workId}</td>
-                <td>${item.name}</td>
-                <td>${item.job}</td>
-                <td>${item.jobTitle}</td>
-                <td>${item.departmentName}</td>
-                <td>${item.email}</td>
+                <td>${permission.workId}</td>
+                <td>${permission.name}</td>
+                <td>${permission.job}</td>
+                <td>${permission.jobTitle}</td>
+                <td>${permission.departmentName}</td>
+                <td>${permission.email}</td>
                 <td>
                     <div class="row">
                         <button type="button" class="btn btn-info btn-xs"
                                 onclick="httpGetUrl()">详细信息
                         </button>
                         <button type="button" class="btn btn-warning btn-xs"
-                                onclick="httpGetUrl('/PMIS/department/modify/${item.workId}')">修改
+                                onclick="httpGetUrl('/PMIS/department/modify/${permission.workId}')">修改
                         </button>
                         <button type="button" class="btn btn-danger btn-xs"
-                                onclick="httpDeleteUrl('/PMIS/department/delete/${item.workId}')">删除
+                                onclick="httpDeleteUrl('/PMIS/department/delete/${permission.workId}')">删除
                         </button>
                     </div>
                 </td>

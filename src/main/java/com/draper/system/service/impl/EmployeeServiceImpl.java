@@ -50,9 +50,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         try {
 
 
-//            employeeMapper.insert();
-//            personMapper.insert();
-//            userMapper.insert();
+//            employeeMapper.create();
+//            personMapper.create();
+//            userMapper.create();
             insertPerson(parameterMap);
             insertEmployee(parameterMap);
             insertUser(parameterMap);

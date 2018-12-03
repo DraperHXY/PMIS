@@ -10,8 +10,6 @@ public interface PermissionMapper {
 
     List<Permission> selectAll();
 
-    Permission createPermission(Permission permission);
-
     /**
      * 通过 id 删除 permission
      *

@@ -3,10 +3,12 @@ package com.draper.system.service;
 
 import com.draper.system.entity.Permission;
 
+import java.util.List;
+
 public interface PermissionService {
 
-    Permission createPermission(Permission permission);
+    boolean create(Permission permission);
 
-    void deletePermission(Long permissionId);
+    List<Permission> findAll();
 
 }
