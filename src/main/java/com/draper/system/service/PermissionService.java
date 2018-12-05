@@ -11,4 +11,6 @@ public interface PermissionService {
 
     List<Permission> findAll();
 
+    Permission find(long id);
+
 }

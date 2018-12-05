@@ -17,4 +17,10 @@
         FROM permission
     </select>
 
+    <select id="select" resultType="com.draper.system.entity.Permission">
+        SELECT *
+        FROM permission
+        WHERE id = #{id}
+    </select>
+
 </mapper>

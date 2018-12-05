@@ -66,4 +66,12 @@
         <put-attribute name="body" value="/WEB-INF/jsp/body/permission/new.jsp"/>
     </definition>
 
+    <definition name="userView" extends="indexView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/user/all.jsp"/>
+    </definition>
+
+    <definition name="roleView" extends="indexView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/role/all.jsp"/>
+    </definition>
+
 </tiles-definitions>

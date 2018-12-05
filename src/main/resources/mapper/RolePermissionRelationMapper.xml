@@ -6,26 +6,26 @@
 <mapper namespace="com.draper.system.dao.RolePermissionRelationMapper">
 
     <insert id="correlate">
-        INSERT INTO user_role
+        INSERT INTO role_permission
         (create_at,update_at,role_id,permission_id)
         VALUES
         (#{createAt}, #{updateAt},#{roleId},#{permissionId})
     </insert>
 
     <delete id="unCorrelate">
-        DELETE FROM user_role
+        DELETE FROM role_permission
         WHERE user_id = #{userId} AND role_id = #{roleId}
     </delete>
 
-    <select id="selectRolePermission" resultType="com.draper.system.entity.UserRoleRelation">
+    <select id="selectRolePermission" resultType="com.draper.system.entity.RolePermissionRelation">
         SELECT *
-        FROM user_role
-        WHERE user_id = #{userId}
+        FROM role_permission
+        WHERE role_id = #{roleId}
     </select>
 
-    <select id="selectPermissionsFromRole" resultType="com.draper.system.entity.UserRoleRelation">
+    <select id="selectPermissionsFromRole" resultType="com.draper.system.entity.RolePermissionRelation">
         SELECT *
-        FROM user_role
+        FROM role_permission
         WHERE role_id = #{roleId}
     </select>
 

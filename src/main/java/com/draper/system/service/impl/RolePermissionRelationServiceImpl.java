@@ -1,15 +1,20 @@
 package com.draper.system.service.impl;
 
 
+import com.draper.system.dao.RolePermissionRelationMapper;
 import com.draper.system.entity.RolePermissionRelation;
 import com.draper.system.entity.UserRoleRelation;
 import com.draper.system.service.RolePermissionRelationService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class RolePermissionRelationServiceImpl implements RolePermissionRelationService {
+
+    @Autowired
+    private RolePermissionRelationMapper rolePermissionRelationMapper;
 
 
     @Override
@@ -24,11 +29,11 @@ public class RolePermissionRelationServiceImpl implements RolePermissionRelation
 
     @Override
     public List<RolePermissionRelation> selectRolePermission(long roleId) {
-        return null;
+        return rolePermissionRelationMapper.selectRolePermission(roleId);
     }
 
     @Override
     public List<UserRoleRelation> selectPermissionsFromRole(long roleId) {
-        return null;
+        return rolePermissionRelationMapper.selectPermissionsFromRole(roleId);
     }
 }

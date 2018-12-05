@@ -29,5 +29,9 @@
         WHERE id = #{id}
     </select>
 
+    <select id="selectAll" resultType="com.draper.system.entity.Role">
+        SELECT *
+        FROM role
+    </select>
 
 </mapper>

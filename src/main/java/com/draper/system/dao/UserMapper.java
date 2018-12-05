@@ -53,4 +53,6 @@ public interface UserMapper {
 
     List<Long> selectAllWorkId();
 
+    List<User> selectAll();
+
 }

@@ -3,6 +3,8 @@ package com.draper.system.service;
 
 import com.draper.system.entity.Role;
 
+import java.util.List;
+
 public interface RoleService {
 
     /**
@@ -36,4 +38,6 @@ public interface RoleService {
      * @return
      */
     Role findRole(long id);
+
+    List<Role> findAll();
 }

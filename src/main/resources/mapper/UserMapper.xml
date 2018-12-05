@@ -35,4 +35,9 @@
         FROM user
     </select>
 
+    <select id="selectAll" resultType="com.draper.system.entity.User">
+        SELECT *
+        FROM user
+    </select>
+
 </mapper>

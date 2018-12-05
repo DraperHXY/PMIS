@@ -1,6 +1,8 @@
 package com.draper.system.service;
 
 
+import com.draper.system.entity.User;
+
 import java.util.List;
 
 public interface UserService {
@@ -49,5 +51,7 @@ public interface UserService {
     void changePassword(String account, String newPassword);
 
     List<Long> findAllWorkId();
+
+    List<User> findAll();
 
 }

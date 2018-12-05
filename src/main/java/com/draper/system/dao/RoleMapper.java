@@ -2,6 +2,8 @@ package com.draper.system.dao;
 
 import com.draper.system.entity.Role;
 
+import java.util.List;
+
 public interface RoleMapper {
 
     /**
@@ -35,6 +37,8 @@ public interface RoleMapper {
      * @return
      */
     Role selectRole(long id);
+
+    List<Role> selectAll();
 
     // FIXME: 2018/11/21 该功能呢应该交给 RolePermissionMapper
     void correlationPermissions(long userId, long... permissionIds);

@@ -18,4 +18,6 @@ public interface PermissionMapper {
      */
     void deletePermission(long id);
 
+    Permission select(long id);
+
 }

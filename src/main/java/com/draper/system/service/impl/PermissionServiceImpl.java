@@ -27,4 +27,9 @@ public class PermissionServiceImpl implements PermissionService {
         return permissionMapper.selectAll();
     }
 
+    @Override
+    public Permission find(long id) {
+        return permissionMapper.select(id);
+    }
+
 }

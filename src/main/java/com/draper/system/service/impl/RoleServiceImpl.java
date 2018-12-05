@@ -6,6 +6,8 @@ import com.draper.system.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class RoleServiceImpl implements RoleService {
@@ -32,6 +34,11 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public Role findRole(long id) {
         return roleMapper.selectRole(id);
+    }
+
+    @Override
+    public List<Role> findAll() {
+        return roleMapper.selectAll();
     }
 
 }

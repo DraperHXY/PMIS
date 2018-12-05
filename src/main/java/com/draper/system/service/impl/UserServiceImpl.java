@@ -65,4 +65,9 @@ public class UserServiceImpl implements UserService {
         return userMapper.selectAllWorkId();
     }
 
+    @Override
+    public List<User> findAll() {
+        return userMapper.selectAll();
+    }
+
 }
