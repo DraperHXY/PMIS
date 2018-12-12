@@ -48,7 +48,7 @@ public interface UserService {
      * @param account
      * @param newPassword
      */
-    void changePassword(String account, String newPassword);
+    void changePassword(String account, String newPassword) throws Exception;
 
     List<Long> findAllWorkId();
 

@@ -73,7 +73,7 @@ public class UserSimpleRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         String account = (String) token.getPrincipal();
         String password = userService.selectPasswordByAccount(account);
-
+        LOGGER.warn("credital = {}", password);
         SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(account, password, getName());
 
         return authenticationInfo;

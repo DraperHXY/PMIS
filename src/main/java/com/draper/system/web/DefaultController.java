@@ -14,13 +14,11 @@ public class DefaultController {
 
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-    @RequiresRoles("user")
     @GetMapping("")
     public String indexView1() {
         return "indexView";
     }
 
-    @RequiresRoles("user")
     @GetMapping("/index")
     public String indexView2() {
         return "indexView";

@@ -1,5 +1,6 @@
 package com.draper.system.service.impl;
 
+import com.draper.common.util.MD5Utils;
 import com.draper.system.dao.UserMapper;
 import com.draper.system.entity.User;
 import com.draper.system.service.UserService;
@@ -56,8 +57,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void changePassword(String account, String newPassword) {
-
+    public void changePassword(String account, String newPassword) throws Exception {
+        userMapper.updatePassword(account, MD5Utils.encrypt(newPassword));
     }
 
     @Override

@@ -10,6 +10,7 @@ import com.draper.system.service.*;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
@@ -134,8 +135,36 @@ public class UserController {
 
     @GetMapping("/logout")
     public String logoutView() {
+        Subject subject = SecurityUtils.getSubject();
+        subject.logout();
         LOGGER.warn("处理成功");
         return "redirect:/user/loginIn";
     }
+
+    @RequiresRoles("admin")
+    @GetMapping("/password")
+    public String passwordResetView() {
+        return "passwordResetView";
+    }
+
+    @PostMapping("/password")
+    public String passwordResetPost(String account, String password){
+        try {
+            userService.changePassword(account, password);
+            return "redirect:/index";
+        } catch (Exception e){
+            e.printStackTrace();
+            return "redirect:/fail";
+        }
+    }
+
+    @GetMapping("/role/{id}")
+    public String roleCorrelateView(){
+        return "roleCorrelateView";
+    }
+
+
+
+
 
 }

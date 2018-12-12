@@ -49,7 +49,7 @@
                                 onclick="httpGetUrl('/PMIS/department/modify/${permission.workId}')">修改
                         </button>
                         <button type="button" class="btn btn-danger btn-xs"
-                                onclick="httpDeleteUrl('/PMIS/department/delete/${permission.workId}')">删除
+                                onclick="httpDeleteUrl('/PMIS/employee/delete/${permission.workId}')">删除
                         </button>
                     </div>
                 </td>

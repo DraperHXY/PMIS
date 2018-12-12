@@ -6,8 +6,7 @@
         <li><a href="/PMIS/role">角色管理</a></li>
         <li><a href="/PMIS/permission">权限管理</a></li>
         <li><a href="/PMIS/user">用户管理</a></li>
-        <li><a href="/admin/userPasswordRest">账号密码重置</a></li>
-        <li><a href="/admin/passwordRest">修改密码</a></li>
+        <li><a href="/PMIS/user/password">密码重置</a></li>
         <li><a href="/PMIS/user/logout">退出系统</a></li>
         <%--<li class="disabled"><a href="##">Responsive</a></li>--%>
         </ul>

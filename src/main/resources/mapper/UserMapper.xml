@@ -40,4 +40,11 @@
         FROM user
     </select>
 
+    <update id="updatePassword">
+        UPDATE user
+        SET password = #{newPassword}
+        WHERE account = #{account}
+    </update>
+
+
 </mapper>

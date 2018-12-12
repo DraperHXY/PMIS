@@ -74,4 +74,9 @@
         <put-attribute name="body" value="/WEB-INF/jsp/body/role/all.jsp"/>
     </definition>
 
+
+    <definition name="passwordResetView" extends="indexView">
+        <put-attribute name="body" value="/WEB-INF/jsp/body/user/reset.jsp"/>
+    </definition>
+
 </tiles-definitions>

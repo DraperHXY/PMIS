@@ -1,6 +1,7 @@
 package com.draper.system.dao;
 
 import com.draper.system.entity.User;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -55,4 +56,5 @@ public interface UserMapper {
 
     List<User> selectAll();
 
+    void updatePassword(@Param("account") String account, @Param("newPassword") String newPassword);
 }

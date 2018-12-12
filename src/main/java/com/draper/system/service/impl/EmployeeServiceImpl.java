@@ -142,6 +142,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         user.setUpdateAt(System.currentTimeMillis());
         user.setAccount(parameterMap.get("account"));
         user.setPassword(MD5Utils.encrypt(parameterMap.get("password")));
+        user.setWorkId(Long.valueOf(parameterMap.get("workId")));
 
         userMapper.insert(user);
         LOGGER.warn("user = {}", user);

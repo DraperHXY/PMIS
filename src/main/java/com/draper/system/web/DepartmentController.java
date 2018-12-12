@@ -73,7 +73,7 @@ public class DepartmentController {
         boolean isDelete = departmentSerivce.delete(id);
 
         if (isDelete) {
-            return "redirect:/department";
+            return "redirect:/index";
         } else {
             return "redirect:/fail";
         }
