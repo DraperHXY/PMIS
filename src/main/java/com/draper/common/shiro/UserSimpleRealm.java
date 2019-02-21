@@ -52,7 +52,8 @@ public class UserSimpleRealm extends AuthorizingRealm {
 
         String account = (String) principals.getPrimaryPrincipal();
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-        List<UserRoleRelation> relations = userRoleRelationService.selectUserRoles(userService.selectIdByAccount(account));
+        List<UserRoleRelation> relations =
+                userRoleRelationService.selectUserRoles(userService.selectIdByAccount(account));
 
         List<String> stringList = new ArrayList<>();
 
@@ -70,11 +71,13 @@ public class UserSimpleRealm extends AuthorizingRealm {
 
     // 用来认证
     @Override
-    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
+    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token)
+            throws AuthenticationException {
         String account = (String) token.getPrincipal();
         String password = userService.selectPasswordByAccount(account);
         LOGGER.warn("credital = {}", password);
-        SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(account, password, getName());
+        SimpleAuthenticationInfo authenticationInfo =
+                new SimpleAuthenticationInfo(account, password, getName());
 
         return authenticationInfo;
     }

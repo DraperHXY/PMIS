@@ -17,13 +17,15 @@
         WHERE user_id = #{userId} AND role_id = #{roleId}
     </delete>
 
-    <select id="selectRolePermission" resultType="com.draper.system.entity.RolePermissionRelation">
+    <select id="selectRolePermission"
+            resultType="com.draper.system.entity.RolePermissionRelation">
         SELECT *
         FROM role_permission
         WHERE role_id = #{roleId}
     </select>
 
-    <select id="selectPermissionsFromRole" resultType="com.draper.system.entity.RolePermissionRelation">
+    <select id="selectPermissionsFromRole"
+            resultType="com.draper.system.entity.RolePermissionRelation">
         SELECT *
         FROM role_permission
         WHERE role_id = #{roleId}

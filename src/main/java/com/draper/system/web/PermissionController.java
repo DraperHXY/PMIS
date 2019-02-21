@@ -34,7 +34,8 @@ public class PermissionController {
     }
 
     @PostMapping("/new")
-    public String permissionNewPost(@RequestParam("permission") String permissionDetail, @RequestParam("description") String description) {
+    public String permissionNewPost(@RequestParam("permission") String permissionDetail,
+                                    @RequestParam("description") String description) {
         Permission permission = new Permission();
         permission.setPermission(permissionDetail);
         permission.setDescription(description);
