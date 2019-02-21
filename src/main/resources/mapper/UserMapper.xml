@@ -12,7 +12,8 @@
         (#{createAt}, #{updateAt}, #{account}, #{password}, #{workId})
     </insert>
 
-    <select id="selectUserByAccount" resultType="com.draper.system.entity.User">
+    <select id="selectUserByAccount"
+            resultType="com.draper.system.entity.User">
         SELECT *
         FROM user
         WHERE account = #{account}

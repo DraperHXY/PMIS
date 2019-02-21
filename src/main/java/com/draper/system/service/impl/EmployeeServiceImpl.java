@@ -48,16 +48,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public boolean create(Map<String, String> parameterMap) {
 
         try {
-
-
-//            employeeMapper.create();
-//            personMapper.create();
-//            userMapper.create();
             insertPerson(parameterMap);
             insertEmployee(parameterMap);
             insertUser(parameterMap);
-
-
         } catch (Exception e) {
             e.printStackTrace();
             return false;
@@ -122,7 +115,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         person.setName(parameterMap.get("name"));
 
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        Date birthDay = format.parse(parameterMap.get("birthDay").toString());
+        Date birthDay = format.parse(parameterMap.get("birthDay"));
         person.setBirthDay(birthDay.getTime());
 
         person.setSex(Integer.valueOf(parameterMap.get("sex")));

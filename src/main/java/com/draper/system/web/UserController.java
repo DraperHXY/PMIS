@@ -79,6 +79,12 @@ public class UserController {
             }
             infoMap.put("workId", workId);
             infoMap.put("name", name);
+            if (roles != null && roles.startsWith("null")){
+                roles = roles.substring(4);
+                LOGGER.warn("roles = {}", roles);
+            } else {
+                LOGGER.warn("未拥有角色");
+            }
             infoMap.put("roles", roles);
             infoMap.put("permissions", permissions);
 
@@ -129,8 +135,6 @@ public class UserController {
         } else {
             return "redirect:/loginIn";
         }
-
-
     }
 
     @GetMapping("/logout")
